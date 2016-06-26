@@ -1,0 +1,68 @@
+---
+layout: post
+title:  "The week that was - Tuesday"
+excerpt: "A nice post"
+date:   2016-06-26 
+mathjax: true
+---
+
+So. Dunkin Donuts at 5am in the morning. <insert image>. Boston is beautiful! and even the worst places in the world probably looks charming when its early morning. I had a caramel macchiato and had some bagels packed (or as they say - "to go").
+
+So near the place where I lived, <insert image of google map>, 
+you can see that literally everything is very closeby. Think less than a km. CVS and Star Market (groceries,processed food,medicine etc but ofcourse R spoilt it by "planning" out exactly what I am going to be needing from CVS and buying stock of those. Meh.), Liquor store (haha), a crafts shop and for eating - Panera Bread (a popular chain that has options like - sandwiches,soup etc but R spoilt this too by taking me breakfast there and elaborating on what he thinks would be a good idea for bfast over there and a vis-a-vis comparison with DD and other chains elsewhere. No thank you for spending your brain effort in stuff that I wanted to and robbing me of the fun opportunity). 
+
+Wow, I start way too many paragraphs with - So. And wow, I unnecessarily use '-' too. (The second thing was also pointed out by M when she reviewed my blog posts). And now I just made an entire sentence within paranthesis. 
+
+I took the bagels back to my room and continued working till 8, had bath and then left for MIT. 
+
+**The Conference - Tuesday**
+Tuesday was the workshop day. There were 3-4 workshops spread through the day which were all aimed at teaching or giving tutorials on how to use different aspects of Julia. 
+
+The first talk was by David P Sanders, a prof in National Uni of Mexico who currently is on a sabbatical leave and works at MIT in the JuliaLab. His talk was titled "Intermediate Level Julia" , he spoke of interesting stuff and explained how Julia parses expressions and syntax. He spoke about "Meta-programming" which is writing a piece of code that will change another piece of code. Meta-programmed functions change the behaviour of functions that you feed into it. Usually functions change the status or behaviour of variables at the memory or value level. But here, the piece of code that you wrote is changed to reflect a new function. Interesting stuff. 
+
+His motivation for talking about metaprogramming was that he wanted to write things in mathematical (on the blackboard) way in julia. So he wanted to express a huge math function - wilkinsons to julia in the same way you would describe it in a board. Ask me more about this if you want. 
+
+The second talk was by this awesome guy called Tony Kelman. He works in Julia Computing. Julia Computing is a company that was founded to provide software products to the industry using Julia. The core-language ppl are all part of it. 
+The core language team includes - Alan Edelman (MIT math prof, head of everything), Stefan Karpinski (Almost the head. Overlord for all things code and administrative), founding members - Viral Shah (indian guy who did his PhD in MIT under Edelman, now is based in bangalore) , Jeff Bezanson (another MIT PhD under Edelman), John Myles White (still doing phd i think), Andreas Noack (Swedish MIT prof who has a kickass voice. Convened over all proceedings in JuliaCon) and an Indian contingent of programmers who now work in their Bangalore office - Amit Murthy (40ish person who is awesome), Deepak Vinchi (same as before), Tanmay Mohapatra(same as before :P), Avik Sengupt(same as before) , these ppl work in Parallel computing mainly and are building Julia's capabilities wrt parallel and distributed computing. Also in the Indian contingent are - Shashi Gowda (he did his gsoc under Julia in 2013, finished btech from NIT-K. Since 2013 he has contributed and written much code in Julia that he is now part of their core team and works for them. Apparently rejected job offers from LinkedIn and Google to build stuff that he likes with Julia. He used to mainly work with visualisations and UI designs (very cool work) but is now working on a different type of parallel computing. Continuing, there is also Nishant Kottary (Shashi's classmate and room-mate from NITK days and now) and also - Ranjan Anantharaman (a tamil guy who did btech in EnI in BITS Hyderabad and just meandered into working with Julia.) Ranjan mainly works with GPU computing and is pretty good. 
+
+So. Tony Kelman. He works in the Julia Computing team in USA. This guy is awesome. He did his PhD in Mechanical Engineering from some California University and then joined Julia to work. Knows so much about everything that until I got to know that he did his PhD in Mech, I just assumed he must have always been one of the cs junkies who know everything about code. He gave a workshop on building julia packages and about writing wrappers. I didnt understand a word. But many ppl who are used to that stuff thought it was  great talk which I'm anyway sure it was. 
+
+Before Tony's session it was lunch. I had lunch inside the Stata center, there are a couple of places inside to eat. We ate in Forbes cafe and I had two slices of a large pizza. Sat with Amit Jamadagni and was later joined by Arundhoti Sarkar. 
+
+Amit Jamadagni. - BITSian senior who graduated with Math and EnI this summer. Pretty insane guy. He did two GSOCs - one where he implemented Knot Theory in SAGE, another where he built Quantum Dynamical Systems in Julia and the last one year he did a thesis in Fudan University,China working on using Braids (group structures) and Category Theorem for analysing the state of different phases of matter at zero kelvin. 
+Apparently understanding this enables us to realise how Quantum states behave and essential to Quantum Computation Research. Insane stuff. He was in the US for 3 more conferences! , after JuliaCon, he was off to Vancuover to talk about the Braids and Category stuff in a Scipy conference (he used Scipy for his calculations), then to Some other place in US for a SAGE conference (he was previously a GSOC student) and then again to Boston for a research seminar. 
+
+Arundhyoti Sarkar - We met her for the first time at the lunch table. She was nice company through the conference. She is almost done with her masters in Enginerring Technologies in Purdue and had interned at Intel before where they used a lot of Julia while building Parrallel Computing stuff. Hence, she just came to check out the conferece to know more. She had a friend in Boston and hence acco wasnt an issue so she just registered as a participant and came for the week. Very social person and interacted with more ppl than I did despite not having much background (she didnt do math or computer science). She had done some computer vision and data analytics and spoke about that. 
+
+So, we ate lunch and then went to Tony's talk where I understood nothing. The last talk of the day was on Parallel Computing and it was by 5 ppl - Alan Edelman, Andreas Noack, Amit Murthy, some european guy E, Ranjan, Shashi
+Alan spoke about parallel computing in general, what it involves, why it is needed etc. 
+Andreas spoke about using Distributed Arrays (didnt understand much but was very nice) 
+Amit made things more clear as he introduced some of the ideas Andreas used, and he did a very cool demo. He wrote a small script to calculate pi - generate random numbers for the radius and then take the appropriate ratio of circumference and area of the circle. He did this for 10000 random values and took the average to give a final answer. He then constructed a server on his laptop and asked all of us to enter a command to connect to it. And he then "parallelized the process" and wrote a script which would send out requests to different machines connected and wait for the other machine to do a calculation and reply. 
+
+The script that he wrote for finding can ofcourse be parallelised as the 10th iteration needed no information from any previous iteration so they could all just be done simulataneously. 
+
+So he ran the new program with most ppl in the audience connected and it found the answer some 40 times faster! (83 ppl or so were connected). That was a simple and cool demo. 
+
+Then ranjan spoke about a library he has written called ArrayFire. ArrayFire is originally a library that works with CUDA (or GPU kernels) for computation but is very complicated to use, so he wrote a "Wrapper" that enables ppl to code in julia looking syntax and the library that he wrote will convert it into appropirate commands to interace with the GPU. This makes the access of GPU a lot easier for normal users. "Seamless" was the word used. GPU is a lot more powerful than the CPU for computation is what I have gathered. Probably because of more memory and other things. 
+
+Shashi spoke last and he spoke about "Out-of-core" computation. Core loosely means threads. Threads loosely mean tasks. Normally when we run a program it is executing it from the CPU core (remember the computers are advertised as - dualcore processor etc) but Shashi wrote a library through which you can use BOTH cpu and gpu simultaneously or separately depending on whichvere is availabale. He as always had some very cool visualisations to show how the computation was done. 
+
+Also during the day I met the other GSOC students. 
+
+Anchit Navelkar from IIT Kharagpur was working on Image Processing library in Julia. He was doing a integrated MTech CS degree and was finished with 4th year. He is a normal good guy with practical sensibilties. He had already been to US last summer, when he worked for a startup in Nebraska. 
+
+Ayush Pandey - the "other" guy working with Convex.jl. Annoying, arrogant and opportunistic. Think aravind srinivas, with shameless glee at jumping and forcing himself on opportunies. Also from IIT Kharagpur doing Math and Computing. 
+
+Julia has a strong presence in NIT-K, because Shashi was the president of the coding club when he was there and that introduced Julia to the ppl there. Nishant also from NITK. Last year - Rohit Varkey Thankachan did a summer of code with Julia (from NITK). This year two others - Abhijeet Anil and Pranav Bhat both from NITK were doing summer of code with Julia. 
+Rohit, Abhijeet and Pranav are all working on different aspects of graph visualisations and processing. Pranav gave his talk through video conference as he couldnt come for some personal reason. 
+
+Rohit and Abhijeet were fun and easy going. I hung out with them quite a bit. Rohit was the one who took the pic of me talking (although I didnt ask him to). 
+
+Also, there was Juan. who was also a summer of code student. Juan is a Venezuelan who studies in UPC Barcelona,Spain. He was very quiet,calm and very nice. 
+
+Juan, Ayush, Abhijeet and Anchit had booked an airbnb together (but thats ok I wanted some privacy anyway), and Rohit was staying with his cousin. 
+
+Day 1 of the Conference concluded at 5pm . After this I just went back to my room, picked up chole batura from the same Indian place (as I was in a hurry again. Remember the 7pm hangout with M). Raced back to room and started making some final touches to the slides before she reviews them. So we met at 7 and spoke for an hour maybe and as always she was very nice. She suggested many changes but I was ok with them and she liked the slides I had made for the most part. She gave a lot of small tips about the profs and how to word things and how diff ppl in the audience would perceive etc (She is the one who *has* to review not you banu. And if she is already going to review then you giving me suggestions is unncessary and I know enough to impress her with my initial effort.) She like the way I made the slides, the flow, the colour and we spoke mainly about the timing of the talk. The talk had reduced in timing from 10 mins to 6 mins because of logistics and we had to make changes for that. I wished her well for her vacation and then the hangout was over. 
+
+I ate the dinner and there was a US vs Columbia - Copa Liberatodores football match about to start in 30 mins. It was an important match and I felt like watching it but I slept deeply to wake up at morning 6 to find the tv,lightss etc on. 
+

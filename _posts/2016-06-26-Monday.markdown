@@ -1,15 +1,10 @@
 ---
 layout: post
-title:  "Post title"
+title:  "The week that was - Monday"
 excerpt: "A nice post"
-date:   2016-06-04 08:02:00
+date:   2016-06-26 
 mathjax: true
 ---
-\
-
-(create another github account with a differente email address and then create this as a Personal Blog Post of that Blog. Make it with images too. Share the id only with appa,amma,banu,sanjana,srinath 
-
-Conversational threads to enable readability of chat messages. Is that possible? maybe a lot of autotagging first could build a system that learns how to do this. Will RL AI techniques help here? Can there be a system that takes in a list of chat messages and classifies and visualises / identifies different threads of the conversation. ? Ofcourse NLP is damn hard I guess. But maybe in a text window, we could give the users a -> button to create a "View" (YES VIEW like in arrays) that would continue the digression of the conversation in a separate window or atleast display it this way to the original user. The normal or main thread of the conversation can have a -> arrow to one of the messages (the head message - start of a new digression conversation, ofcourse the VIEW here is not continuous, whenever a new user wants to visit the view and decides to reply he can. so if there are multiple views, how do you know which one is the main thread? - so maybe views beyond (the normal period of chat retention) are forgotten as usual. Okay so the main thread would have to be explicitly defined in concept or by the user. So latest or new main thread could be by a vote system within the groups. One person puts it up as a suggestion and others agree that this has to be the main thread of the conversation. Doing so changes the current Main Thread of conversation. Note - there is actually only one thread. What we are doing is creating multiple views and manipulating them. The storage/access/manipulation needs to be efficient else this will all be too slow. Either a democratic vote system or one admin of a group who can decide what gets to be the s
 
 Got up early morning at 5 am as I had slept the previous night at 9. 
 Also, I hadn't made a draft of my slides yet and Madeleine mailed me saying JuliaCon is coming quick and I need to make a draft of slides so that we both can go through it together. 
@@ -36,14 +31,8 @@ Two issues. The conference on Tuesday whole day meant I had no time to work on t
 
 So. I just ended up working through the night. From like 2am till 8:30 am. In the middle I went to Dunkin Donuts (which opens at 5am!) to have coffee. Over the week I have got used to American Coffee. It can actually be handy in cases when you want strong coffee. As you can just add a LOT of decoction into a medium theatre sized cup with a little bit of milk. Also, the coffee here isnt frothy (like filter is) and mostly not really hot. (It cools down very quickly even if you take it hot) , so if you get used to have the same coffee cold then you can just walk all over and do whatever and keep feeding yourself caffeine. 
 
-So. Dunkin Donuts at 5am in the morning. <insert image>. Boston is beautiful! and even the worst places in the world probably looks charming when its early morning. I had a caramel macchiato and had some bagels packed (or as they say - "to go").
 
-So near the place where I lived, <insert image of google map>, 
-you can see that literally everything is very closeby. Think less than a km. CVS and Star Market (groceries,processed food,medicine etc but ofcourse R spoilt it by "planning" out exactly what I am going to be needing from CVS and buying stock of those. Meh.), Liquor store (haha), a crafts shop and for eating - Panera Bread (a popular chain that has options like - sandwiches,soup etc but R spoilt this too by taking me breakfast there and elaborating on what he thinks would be a good idea for bfast over there and a vis-a-vis comparison with DD and other chains elsewhere. No thank you for spending your brain effort in stuff that I wanted to and robbing me of the fun opportunity). 
 
-Wow, I start way too many paragraphs with - So. And wow, I unnecessarily use '-' too. (The second thing was also pointed out by M when she reviewed my blog posts). And now I just made an entire sentence within paranthesis. 
-
-I took the bagels back to my room and continued working 
 
 
 

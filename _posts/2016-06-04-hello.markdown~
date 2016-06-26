@@ -1,0 +1,133 @@
+---
+layout: post
+title:  "Post title"
+excerpt: "A nice post"
+date:   2016-06-04 08:02:00
+mathjax: true
+---
+
+Hello world, this is **markdown**.
+updating ? 
+<div>$$\sum\frac{1}{a}$$</div>
+
+Any LP problem can be formulated as:
+$$
+\begin{array}{lc}
+\min & c^Tx \\
+\textrm{subject to} &  Ax = b \\
+& l \leq x \leq u
+\end{array}
+$$
+
+Some of the simple bounds $l_j, u_j$ may be $-\infty, \infty$
+Define $L  = \{ j : l_j > -\infty\} \hspace{0.1in}$ and $U = \{ j : u_j < \infty\}$
+
+Then the constraints of the LP are:
+$$
+    \begin{array}{cl}
+ Ax^* &= b \\
+ A^T + y^* &= c \\
+ (x_j^*-l_j)z_j^*& = 0 \\
+ (u_j-x_j^*)z_j^*& = 0 \\
+ z_j^* &\geq 0 \hspace{0.1in} \forall \hspace{0.1in} j \hspace{0.1in} \in \hspace{0.1in} \mbox{L} \\
+ z_j^* &\leq 0 \hspace{0.1in} \forall \hspace{0.1in} j \hspace{0.1in} \in \hspace{0.1in} \mbox{U} \\
+z_j^* &= 0 \hspace{0.1in} \forall \hspace{0.1in} j \hspace{0.1in} \notin \hspace{0.1in} L \cup U
+    \end{array}.
+$$
+We want a pre-solve procedure that would reduce the size of A without creating new non-zero terms. This also means that linear transformations are not allowed but changes to $c,b,l,u$ are.
+
+We make several passes through A and remove redundancies as and when they are detected. Some types of redundancies are easily understood and we will look at few of them.\n
+
+== Redundancies in LP
+
+*Empty Rows/Columns*
+
+When a row $i$ is empty, either the constraint is redundant or infeasible.\n
+
+When a column $j$ is empty, depending on the bounds on the variable and the objective function, the variable $x_j$ can either be fixed at its bounds or is unbounded. \n
+*Row Singletons*
+$$
+ \exists (i,k) \textrm{ s.t. } a_{ij} = 0 \hspace{0.1in} \forall j \neq k, a_{ik} \neq 0    $$
+Here, the $i^{th}$ constraint fixes the variable $x_k$ at the value - $\frac{b_i}{a_{ik}}$
+
+Thus we can substitute $x_k$ out of the system and reduce the number of variables by one
+
+Thus, one reduction could possibly lead to several others and to exploit this, we need to keep a count of number of non-zeros in each constraint and a list containing all singleton constraints.
+
+Every time we fix a variable, the number of non-zeros is updated and the new singleton constraints that arise are added to the list. \n
+
+*Column Singletons*
+    $$
+     \exists (j,k) \textrm{ s.t. }  a_{ij} = 0 \hspace{0.1in} \forall i \neq k, a_{kj} \neq 0   
+    $$
+    A /free/ column singleton occurs on variable $j$ when both $l_j = -\infty$ and $u_j = \infty$. Here again we can substitute:
+    $$
+     x_j = \frac{b_k - \displaystyle\sum_{p \neq j} a_{kp}x_p}{a_{kj}}   
+    $$
+    Removal of column singletons is very advantageous as they result in the removal of one variable and also one constraint.
+
+	Another possibility is a Doubleton Equation combined with a column singleton :
+    $$
+    \exists (i,j,k) : a_{ij}x_j + a_{ik}x_k = b_i , \hspace{0.1in} j \neq k,\hspace{0.1in} a_{ij} \neq 0,\hspace{0.1in} a_{ik} \neq 0
+    $$
+    In this case, when $x_k$ is a column singleton we can modify bounds on $x_j$ such that feasible region is unchanged when bounds on $x_k$ are removed.
+`   Whenever our Presolve procedure detects a column singleton $x_j$, we try to establish that it is /implied free/.
+    A variable is /implied free/ if we can construct new bounds, that are at least as tight as the original bounds. A candidate pair of bounds for the variable is calculated for each $a_{ij}$ as -
+    $$
+    \begin{array}{cc}
+    u_{ij} = & \frac{b_i - \displaystyle\sum_{k \in P_{ij} } a_{ik}l_k - \displaystyle\sum_{p \in M_{ij}} a_{ik}u_k }{a_{ij}},\hspace{0.1in}  a_{ij} > 0 \\
+    u_{ij} = & \frac{b_i - \displaystyle\sum_{k \in P_{ij} } a_{ik}u_k - \displaystyle\sum_{p \in M_{ij}} a_{ik}l_k }{a_{ij}},\hspace{0.1in}  a_{ij} < 0 \\     
+    l_{ij} = & \frac{b_i - \displaystyle\sum_{k \in P_{ij} } a_{ik}l_k - \displaystyle\sum_{p \in M_{ij}} a_{ik}u_k }{a_{ij}},\hspace{0.1in}  a_{ij} < 0 \\
+    l_{ij} = & \frac{b_i - \displaystyle\sum_{k \in P_{ij} } a_{ik}u_k -\displaystyle \sum_{p \in M_{ij}} a_{ik}l_k }{a_{ij}},\hspace{0.1in}  a_{ij} > 0
+    \end{array}
+    $$
+    For any feasible solution $x$, it is easy to observe that $l_{ij} \leq x_j \leq u_{ij}$. Thus, we have an implied free column singleton if - $l_j \leq l_{kj} \leq u_{kj} \leq u_j$
+
+
+*Forcing and Dominating Constraints*
+
+Let $P_i = \{i : a_{ij} > 0\}$ and $M_i = \{i : a_{ij} < 0\}$. Let's compute the quantities:
+$$
+\begin{array}{cc}
+    g_{i} = & \sum_{j \in P_{i} } a_{ij}l_j - \sum_{j \in M_{i}} a_{ij}u_j \\
+    h_{i} = & \sum_{j \in M_{i} } a_{ij}l_j - \sum_{j \in P_{i}} a_{ij}u_j
+\end{array}
+$$
+Clearly, $g_i \leq \sum a_{ij}x_j \leq h_i$ for any solution $x$. Now if $h_i < b_i$ or $g_i > b_i$, we have an unfeasible constraint.
+
+A forcing constraint is one where $g_i = b_i$ or $h_i = b_i$. Here, the value of $x_j$ is fixed at its bounds according to the sign of $a_{ij}$ and thus we can fix all variables that occur in the $i^{th}$ constraint.
+
+Removal of Forcing Constraints is highly advantageous as they we remove all variables that are structurally degenerate. We can also use this to detect more column singletons and we can determine $l_{ij}', u_{ij}'$ for appropriate cases when $a_{ij} \neq 0 $ and when $g_i$ or $h_i$ is finite.
+$$
+\begin{array}{cc}
+    u_{ij} = & \frac{b_i - g_i}{a_{ij}} + l_j, \hspace{0.1in}  a_{ij} > 0 \\
+    u_{ij} = & \frac{b_i - h_i}{a_{ij}} + l_j, \hspace{0.1in}  a_{ij} < 0 \\        
+    l_{ij} = & \frac{b_i - h_i}{a_{ij}} + u_j, \hspace{0.1in}  a_{ij} > 0 \\
+    l_{ij} = & \frac{b_i - g_i}{a_{ij}} + u_j, \hspace{0.1in}  a_{ij} < 0       
+\end{array}
+$$
+This is called the Dominated Constraint Procedure. Similarly there are concepts of Dominated Columns and Forcing Columns elaborately discussed in the paper by Andersen.
+
+== Algorithm for LP
+
+. Remove all fixed variables
+. Repeat
+    .. Check Rows
+        ... Remove Row Singletons
+        ... Remove Forcing Constraints
+    .. Dominated Constraints
+        ... Remove all dominated constraints
+    .. Check Columns
+        ... Remove all free, implied free column singletons
+        ... Remove column singleton-double combinations
+    .. Dominated Columns
+    .. Duplicate Rows
+    .. Duplicate Columns
+. Until no reduction in last pass
+. Remove all empty rows and columns
+
+We also need to maintain a 'stack' of presolve operations and undo a reduction such that, if the primal and dual solutions to the reduced problem are optimal and feasible, so is the solution to the restored problem.
+
+This constitutes a Post-solve procedure to recover solutions to the orginial problem, after we have solved the reduced LP.
+
+Each of the operations in pre-solve has a corresponding post-solve procedure whereby we 'unfix' the fixed variable $x_j$ or constraint $i$ at each iteration.

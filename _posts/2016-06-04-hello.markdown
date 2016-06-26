@@ -5,129 +5,47 @@ excerpt: "A nice post"
 date:   2016-06-04 08:02:00
 mathjax: true
 ---
+\
 
-Hello world, this is **markdown**.
-updating ? 
-<div>$$\sum\frac{1}{a}$$</div>
+(create another github account with a differente email address and then create this as a Personal Blog Post of that Blog. Make it with images too. Share the id only with appa,amma,banu,sanjana,srinath 
 
-Any LP problem can be formulated as:
-$$
-\begin{array}{lc}
-\min & c^Tx \\
-\textrm{subject to} &  Ax = b \\
-& l \leq x \leq u
-\end{array}
-$$
+Conversational threads to enable readability of chat messages. Is that possible? maybe a lot of autotagging first could build a system that learns how to do this. Will RL AI techniques help here? Can there be a system that takes in a list of chat messages and classifies and visualises / identifies different threads of the conversation. ? Ofcourse NLP is damn hard I guess. But maybe in a text window, we could give the users a -> button to create a "View" (YES VIEW like in arrays) that would continue the digression of the conversation in a separate window or atleast display it this way to the original user. The normal or main thread of the conversation can have a -> arrow to one of the messages (the head message - start of a new digression conversation, ofcourse the VIEW here is not continuous, whenever a new user wants to visit the view and decides to reply he can. so if there are multiple views, how do you know which one is the main thread? - so maybe views beyond (the normal period of chat retention) are forgotten as usual. Okay so the main thread would have to be explicitly defined in concept or by the user. So latest or new main thread could be by a vote system within the groups. One person puts it up as a suggestion and others agree that this has to be the main thread of the conversation. Doing so changes the current Main Thread of conversation. Note - there is actually only one thread. What we are doing is creating multiple views and manipulating them. The storage/access/manipulation needs to be efficient else this will all be too slow. Either a democratic vote system or one admin of a group who can decide what gets to be the s
 
-Some of the simple bounds $l_j, u_j$ may be $-\infty, \infty$
-Define $L  = \{ j : l_j > -\infty\} \hspace{0.1in}$ and $U = \{ j : u_j < \infty\}$
+Got up early morning at 5 am as I had slept the previous night at 9. 
+Also, I hadn't made a draft of my slides yet and Madeleine mailed me saying JuliaCon is coming quick and I need to make a draft of slides so that we both can go through it together. 
 
-Then the constraints of the LP are:
-$$
-    \begin{array}{cl}
- Ax^* &= b \\
- A^T + y^* &= c \\
- (x_j^*-l_j)z_j^*& = 0 \\
- (u_j-x_j^*)z_j^*& = 0 \\
- z_j^* &\geq 0 \hspace{0.1in} \forall \hspace{0.1in} j \hspace{0.1in} \in \hspace{0.1in} \mbox{L} \\
- z_j^* &\leq 0 \hspace{0.1in} \forall \hspace{0.1in} j \hspace{0.1in} \in \hspace{0.1in} \mbox{U} \\
-z_j^* &= 0 \hspace{0.1in} \forall \hspace{0.1in} j \hspace{0.1in} \notin \hspace{0.1in} L \cup U
-    \end{array}.
-$$
-We want a pre-solve procedure that would reduce the size of A without creating new non-zero terms. This also means that linear transformations are not allowed but changes to $c,b,l,u$ are.
+Personally, If I have put in the effort then giving a talk - no problem. Have done it before on campus with confidence and I know what to talk and how and always want to do it extemporae or on the spot. Infact, timing it/running through the talk in advance etc makes me uncomfortable. Making Slides again no issue. I knew what I wanted to make and how I wanted it to look and the sequence in which things had to go. So I guess, the biggest concern was what sort of suggestions she might have and how she would want to change it. But all power to her and I respect her opinion very much so I can't complain. 
 
-We make several passes through A and remove redundancies as and when they are detected. Some types of redundancies are easily understood and we will look at few of them.\n
+Before I could make the slides, I needed to code some more. Some features still had to be implemented so that I can show them in the talk. The sunday was lost in the mess that happened. So I was behind schedule with the code. 
 
-== Redundancies in LP
+Raju  Mama (to henceforth be called just R) wanted to do yet another micro level planning on what my daily commute would look like. He wanted to take the train to MIT in the morning to see how the morning trip looks like and what the breakfast options are there at the Porter Square and also at the MIt square and probably scout all the options near MIT that would be open before 9. Which was just unnecessary and takes away all the fun of exploring. So I anyway did NOT want to do that. 
 
-*Empty Rows/Columns*
+I told him I have to work(which was anyway true) and hence that we have to skip the mornign plans and that I would have to start doing my work asap. So I just met him for breakfast at Panera Bread and then he left after that. We had bagels and coffee for breakfast. 
 
-When a row $i$ is empty, either the constraint is redundant or infeasible.\n
+I worked through most of the day. On and off. Around 2pm I went out to get lunch. First day of the week and I was too busy to look up stuff so played it safe and went to the Indian place nearby. Passage to India. Had biriyani and vegetable pakora, both were yummy but the quantity was so much I had it for dinner and post dinner too. 
 
-When a column $j$ is empty, depending on the bounds on the variable and the objective function, the variable $x_j$ can either be fixed at its bounds or is unbounded. \n
-*Row Singletons*
-$$
- \exists (i,k) \textrm{ s.t. } a_{ij} = 0 \hspace{0.1in} \forall j \neq k, a_{ik} \neq 0    $$
-Here, the $i^{th}$ constraint fixes the variable $x_k$ at the value - $\frac{b_i}{a_{ik}}$
+I came back and gave a short reply to Madeleine (here after to be referred to as M) saying I needed to still make the slides and that we should meet (google hangout) on Tuesday. She replied soon (as always) asking me if Tuesday morning is ok. I was too tired to immediately reply. I wanted to see a EUROS football match which was on at 4 but after the lunch I just slept hard and woke up only at 10 or so. Coding was still lagging behind and I was very tired and just wanted to sleep. Had dinner and wasted an hour or two. I thought I will sleep and wake up early tomorrow and do the slides work. 
 
-Thus we can substitute $x_k$ out of the system and reduce the number of variables by one
+I still hadnt replied to Madeleine's email but. I have a bad habit of not replying unless I have the energy to focus on it to fullest extent. I keep working and thinking in a series of bursts (in different activities) and sometimes the interval between two relevant bursts of thought allocation - for eg: Keep friends and family updated - is way too long. Leading to frustration. The issue is a little deep with some abstract psychological behaviour and thoughts but I can try and do stuff like what I am doing right now to proxy for that absence emotionally and physically. (If that even works)
 
-Thus, one reduction could possibly lead to several others and to exploit this, we need to keep a count of number of non-zeros in each constraint and a list containing all singleton constraints.
+So Madeleine's mail. I replied. She wanted me to talk to her on either Monday evening or Tuesday morning when I was free. I ofcourse replied monday night only so I informed here that the conference starts Tuesday morning at 8 and hence I couldnt talk to her Tuesday morning. I suggested Tuesday evening 7pm (my time, she lives in California like banu). She replied quickly saying ok. 
 
-Every time we fix a variable, the number of non-zeros is updated and the new singleton constraints that arise are added to the list. \n
+M was going off for vacation till next Monday and in that time she said she would be unavailable for any query. She is joining Cornell as prof from July 1, so I assume this was a short vacation before moving to Ithaca,NY and setting up her base there. 
 
-*Column Singletons*
-    $$
-     \exists (j,k) \textrm{ s.t. }  a_{ij} = 0 \hspace{0.1in} \forall i \neq k, a_{kj} \neq 0   
-    $$
-    A /free/ column singleton occurs on variable $j$ when both $l_j = -\infty$ and $u_j = \infty$. Here again we can substitute:
-    $$
-     x_j = \frac{b_k - \displaystyle\sum_{p \neq j} a_{kp}x_p}{a_{kj}}   
-    $$
-    Removal of column singletons is very advantageous as they result in the removal of one variable and also one constraint.
+Two issues. The conference on Tuesday whole day meant I had no time to work on the talk during the day. Her going away on vacation meant I absolutely had to get it done by Tuesday evening. 
 
-	Another possibility is a Doubleton Equation combined with a column singleton :
-    $$
-    \exists (i,j,k) : a_{ij}x_j + a_{ik}x_k = b_i , \hspace{0.1in} j \neq k,\hspace{0.1in} a_{ij} \neq 0,\hspace{0.1in} a_{ik} \neq 0
-    $$
-    In this case, when $x_k$ is a column singleton we can modify bounds on $x_j$ such that feasible region is unchanged when bounds on $x_k$ are removed.
-`   Whenever our Presolve procedure detects a column singleton $x_j$, we try to establish that it is /implied free/.
-    A variable is /implied free/ if we can construct new bounds, that are at least as tight as the original bounds. A candidate pair of bounds for the variable is calculated for each $a_{ij}$ as -
-    $$
-    \begin{array}{cc}
-    u_{ij} = & \frac{b_i - \displaystyle\sum_{k \in P_{ij} } a_{ik}l_k - \displaystyle\sum_{p \in M_{ij}} a_{ik}u_k }{a_{ij}},\hspace{0.1in}  a_{ij} > 0 \\
-    u_{ij} = & \frac{b_i - \displaystyle\sum_{k \in P_{ij} } a_{ik}u_k - \displaystyle\sum_{p \in M_{ij}} a_{ik}l_k }{a_{ij}},\hspace{0.1in}  a_{ij} < 0 \\     
-    l_{ij} = & \frac{b_i - \displaystyle\sum_{k \in P_{ij} } a_{ik}l_k - \displaystyle\sum_{p \in M_{ij}} a_{ik}u_k }{a_{ij}},\hspace{0.1in}  a_{ij} < 0 \\
-    l_{ij} = & \frac{b_i - \displaystyle\sum_{k \in P_{ij} } a_{ik}u_k -\displaystyle \sum_{p \in M_{ij}} a_{ik}l_k }{a_{ij}},\hspace{0.1in}  a_{ij} > 0
-    \end{array}
-    $$
-    For any feasible solution $x$, it is easy to observe that $l_{ij} \leq x_j \leq u_{ij}$. Thus, we have an implied free column singleton if - $l_j \leq l_{kj} \leq u_{kj} \leq u_j$
+So. I just ended up working through the night. From like 2am till 8:30 am. In the middle I went to Dunkin Donuts (which opens at 5am!) to have coffee. Over the week I have got used to American Coffee. It can actually be handy in cases when you want strong coffee. As you can just add a LOT of decoction into a medium theatre sized cup with a little bit of milk. Also, the coffee here isnt frothy (like filter is) and mostly not really hot. (It cools down very quickly even if you take it hot) , so if you get used to have the same coffee cold then you can just walk all over and do whatever and keep feeding yourself caffeine. 
+
+So. Dunkin Donuts at 5am in the morning. <insert image>. Boston is beautiful! and even the worst places in the world probably looks charming when its early morning. I had a caramel macchiato and had some bagels packed (or as they say - "to go").
+
+So near the place where I lived, <insert image of google map>, 
+you can see that literally everything is very closeby. Think less than a km. CVS and Star Market (groceries,processed food,medicine etc but ofcourse R spoilt it by "planning" out exactly what I am going to be needing from CVS and buying stock of those. Meh.), Liquor store (haha), a crafts shop and for eating - Panera Bread (a popular chain that has options like - sandwiches,soup etc but R spoilt this too by taking me breakfast there and elaborating on what he thinks would be a good idea for bfast over there and a vis-a-vis comparison with DD and other chains elsewhere. No thank you for spending your brain effort in stuff that I wanted to and robbing me of the fun opportunity). 
+
+Wow, I start way too many paragraphs with - So. And wow, I unnecessarily use '-' too. (The second thing was also pointed out by M when she reviewed my blog posts). And now I just made an entire sentence within paranthesis. 
+
+I took the bagels back to my room and continued working 
 
 
-*Forcing and Dominating Constraints*
 
-Let $P_i = \{i : a_{ij} > 0\}$ and $M_i = \{i : a_{ij} < 0\}$. Let's compute the quantities:
-$$
-\begin{array}{cc}
-    g_{i} = & \sum_{j \in P_{i} } a_{ij}l_j - \sum_{j \in M_{i}} a_{ij}u_j \\
-    h_{i} = & \sum_{j \in M_{i} } a_{ij}l_j - \sum_{j \in P_{i}} a_{ij}u_j
-\end{array}
-$$
-Clearly, $g_i \leq \sum a_{ij}x_j \leq h_i$ for any solution $x$. Now if $h_i < b_i$ or $g_i > b_i$, we have an unfeasible constraint.
 
-A forcing constraint is one where $g_i = b_i$ or $h_i = b_i$. Here, the value of $x_j$ is fixed at its bounds according to the sign of $a_{ij}$ and thus we can fix all variables that occur in the $i^{th}$ constraint.
 
-Removal of Forcing Constraints is highly advantageous as they we remove all variables that are structurally degenerate. We can also use this to detect more column singletons and we can determine $l_{ij}', u_{ij}'$ for appropriate cases when $a_{ij} \neq 0 $ and when $g_i$ or $h_i$ is finite.
-$$
-\begin{array}{cc}
-    u_{ij} = & \frac{b_i - g_i}{a_{ij}} + l_j, \hspace{0.1in}  a_{ij} > 0 \\
-    u_{ij} = & \frac{b_i - h_i}{a_{ij}} + l_j, \hspace{0.1in}  a_{ij} < 0 \\        
-    l_{ij} = & \frac{b_i - h_i}{a_{ij}} + u_j, \hspace{0.1in}  a_{ij} > 0 \\
-    l_{ij} = & \frac{b_i - g_i}{a_{ij}} + u_j, \hspace{0.1in}  a_{ij} < 0       
-\end{array}
-$$
-This is called the Dominated Constraint Procedure. Similarly there are concepts of Dominated Columns and Forcing Columns elaborately discussed in the paper by Andersen.
-
-== Algorithm for LP
-
-. Remove all fixed variables
-. Repeat
-    .. Check Rows
-        ... Remove Row Singletons
-        ... Remove Forcing Constraints
-    .. Dominated Constraints
-        ... Remove all dominated constraints
-    .. Check Columns
-        ... Remove all free, implied free column singletons
-        ... Remove column singleton-double combinations
-    .. Dominated Columns
-    .. Duplicate Rows
-    .. Duplicate Columns
-. Until no reduction in last pass
-. Remove all empty rows and columns
-
-We also need to maintain a 'stack' of presolve operations and undo a reduction such that, if the primal and dual solutions to the reduced problem are optimal and feasible, so is the solution to the restored problem.
-
-This constitutes a Post-solve procedure to recover solutions to the orginial problem, after we have solved the reduced LP.
-
-Each of the operations in pre-solve has a corresponding post-solve procedure whereby we 'unfix' the fixed variable $x_j$ or constraint $i$ at each iteration.

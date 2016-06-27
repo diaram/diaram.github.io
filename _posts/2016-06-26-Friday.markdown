@@ -1,0 +1,44 @@
+---
+layout: post
+title:  "The week that was - Friday"
+excerpt: "A nice post"
+date:   2016-06-26 
+mathjax: true
+---
+Blog post - Weird humourous Soup. 
+
+Friday! My birthday, the day I have to give the talk! at MIT! What a day! Who would have imagined that in March when I was down and out after T1 , I would get gsoc, who would have thought it would be with Julia! who would have thought I would make a trip to MIT! Who would have thought I would be in a hackerspace where people randomly started discussions on the blackboard about mathematicall cool stuff like Singular Value Decompositons, Probabilistic Graphs etc. Who would have thought so many things. 
+
+My personal style of humour has this tinge of slapstick mixed with dumb coincidences and hypothetical observations that would make a lot more sense if one were high. Some of these events that have scripted themselves out so far have also been like this! but this time its not me making these joke-like-truthful observation statements! 
+
+Stuff like this has funnily happened in the past too. I gave my IIT JEE exam in the school where I burned bridges and left to study for IIT. That's pretty incredible given the allotments are random (or unpredictably dependent on when you fill the application!)
+
+I left Mech to get back to BITS again for Math. Someone out there is tripping. 
+
+The first time I read that the C compiler was written in C itself I was like - "Well how is the compiler compiled then? " I still don't really know the answer and probably it will get answered in the compilers course next year (ignoring the philosophical digression of "Who will guard the gaurds?"). The link here is , it appears as if my style of humour is somehow also behind the way some of these are events and the life experiences ofcourse influence my sense of humour. So its all mixed in that escher like stairs, the cause-effect endless cycle and finally just a Weird Humourous Soup. 
+
+Lets take a step back here, I didnt really achieve much. I didnt actually get admitted to MIT. Nor did I present a research paper. Nor did I apply to talk in the JuliaCon. Although, my proposal to GSOC had a tinge of poster/research paper and had I started implementing it on my own and applied to JuliaCon, I think I would have got invited. Okay, alright, so its not exactly an achievement, then why does it still feel so insane? BECAUSE ITS MIT. The hallways, the roads, the crowd, the blackboards - everything extremely inspiring. <insert image> The MIT station has its history depicted across the walls with one major event MIT contributed too every year for the last 100 or so years. The engravings of famous scientists names on the walls of the MIT math and Physics department buildings! The Stata center! Its impossible to not be amazed and speechless. I repeat. Its MIT. 
+
+For good number of things I know that I have put in a lot of effort with nothing to show for and it has always stung badly. I have also technically not been part of any "team" in any capacity despite playing so much football,tennis,cricket and the other possibilities of being in a team. The Julia community - WOW! , I simply haven't met such friendly interesting people! The humbleness, the deep technical side of even the most social of conversations, the way their minds work! I'm so sold on the community I am going to continue working and contributing far beyond the summer of code etc. I am finally a part of a community and its upto me to make myself important and helpful to them.           
+
+So its overwhelming to finally get to that stage of work where you have the "get in" pass and don't need to look from outside wistfully. I get emotional,don't I. Life is interesting. 
+
+Back to Friday then :P 
+
+I was up in the morning at 6 and was furiously working on the slides, I skipped breakfast and left for MIT at 9:30 (yeah I missed the talk of the keynote speaker for the day.) I was there for Erica's talk on using Julia for Economic Modelling, which was very interesting. After the morning break, from 10:40, it was a line of talks by GSOC students. Kenta Sato was this PhD student from Japan who had done gsoc last year too and was doing very impressive work. One of the students wasnt there as he was sick so everyone's slot got pushed up. I entered the hall at 10:30 itself during the break and checked my slides and set the projector options on my laptop and checked sound etc. (good that I did!), So I was prepared to give the talk ahead of time for that student who was sick but Andreas (who was in charge of the schedule) said it was simpler to just slide up everyone. I said ok. 
+
+I also had another agenda for wanting to talk at that slot. My talk was on paper scheduled to be after Ayush's. Yesterday, he walked up to me asked me to show my slides, Which I begrudginly did, and he hadn't even started on his yet. Bloody pissing off guy, he decided to do the exact same thing that I did, the exact same format of slides etc. Pissing off. Everyone was making their slides with normal powerpoint and I had found this javascript lib that rendered the slide across of frames. Now this guy was going to copy it and talk before me -.-
+
+Ofcourse, I can't cross talk Andreas, So I said yeah sure and was just on the standby to be there in case the chance opens up. And well it did. Ayush didnt know the talks were slided up and neither did one more person before him, so the two ppl where nowhere to be found (which is not the organisers fault, the speakers were supposed to be there from the start of session). So when his chance came, he wasnt there and I was the next in line and ready with my laptop in hand, so I just stepped in and gave my talk! And I think it went well. I like the way I spoke and what I told. 
+
+Finally ayush did come in at exactly the time his talk was scheduled on paper but he couldnt get his laptop to work (the same bug that I fixed an hour back), and hence someone else spoke while he tried to figure it out in the sides. Finally I did ask him to mail me his slides and he spoke later using my laptop. I think his talk was bad but whatever. 
+
+Another gsoc student was an undergrad at Princeton in Mathematics (!) - Joseph Obiajulu who spoke really well and confidently.
+
+So the talk was done with and we went to the food trucks for lunch and I again had the strawberry broccoli. This time I went with Arundhyoti. She is a really nice person and  I quietly told her that it was infact my birthday and she got excited and told most ppl. Rohit and abhijeet wished me(they are nice too). She said lets go kayaking, and I said yeah that sounds like a good idea (it was the last day of the week and in Cambridge and MY BIRTHDAY). The talks got over at 5 and after some techie discussions till 6, we walked as a group (me,arundhyoti,amit and anchit) to the kayak place but then after reaching there we decided against it. <insert image of four of us>. After a lot of walking it was a little annoying that we didnt actually kayak. We didnt because amit and anchit werent really interested and after the long walk we were all really tired and hungry for dinner, so finally we decided that we will jsut ahve dinner first and then see what to do. But then again, for having dinner, eveyrone had a diff opinion and so much talk and i was too hungry to care and got very annoyed. about 2. hours later of lot of random shit and discussion we finally entered this meditarannean place to eat. FINALLY. By this time I totally lost mood about the birthday as nothing really happened for the birthday and I was pissed with these ppl. The dinner was good but. Food was good. Conversation too and arundhyoti bought two choco lava cakes and I "cut" it and we shared and ate it. <insert image>. 
+
+During dinner, I probed Amit on what his Thesis was about and he explained and I just got high. Just simply high. (or a craze filled state @amma). I got damn excited and then tried to explain to Arundhyoti about what he was talking and then got on to this other thing called - Unreasonable Effectiveness of Mathematics <insert link> and was tripping for like an hour on this topic. Finally we left the place at 9:45 or so and we stepped out to find a huge crowd of thousand ppl on the road and music playing and ppl dancing to someone playing songs. Its apparently the Boston Dance Party and happens once a year! and this year it was dedicated to the Orlando Shooting. How coincidental that it fell on my birthday! We didnt even know that it was happening there. <insert images> So we just hung around a bit over there. Looking at the crowd and walking through it. 
+
+Finally we left to go back home and I slept immediately after coming back. Friday ends. 
+
+
